@@ -29,7 +29,6 @@ Scenario: Crear Post
   And I surf by the post
   And I wait for 5 seconds
 
-
 @user3 @web
 Scenario: My scenario 3
   Given I navigate to page "<URL>"
@@ -70,7 +69,6 @@ Scenario: My scenario 4
   And I imput a new member "$name_2", "$email_2", "$string_2", "$string_3"
   And I wait for 3 seconds
 
-
 @user5 @web
 Scenario: My scenario 5
   Given I navigate to page "<URL>"
@@ -87,8 +85,6 @@ Scenario: My scenario 5
   And I wait for 3 seconds
   And I edit an exists member "$name_2", "$string_4", "$string_5"
   And I wait for 3 seconds
-
-
 
 @user6 @web
 Scenario: My scenario 6
@@ -111,9 +107,6 @@ Scenario: My scenario 6
   And I confirm Delete Member
   And I wait for 3 seconds
 
-
-
-
 @user7 @web
 Scenario: My scenario 7  
   Given I navigate to page "<URL>"
@@ -132,4 +125,27 @@ Scenario: My scenario 7
   And I wait for 3 seconds
   And I change password "<OLDPASSWORD>" and "<NEWPASSWORD>"
   And I wait for 7 seconds
+
+@user11 @web
+Scenario: Eliminar Post
+  Given I navigate to page "<URL>"
+  And I wait
+  And I enter email "<EMAIL>"
+  And I wait
+  And I enter password "<PASSWORD>"
+  And I wait
+  And I click login
+  And I wait for 3 seconds
+  And I go to posts
+  And I wait
+  And I click on a published post
+  And I wait
+  And I click settings button
+  And I wait
+  And I click delete button
+  And I wait
+  And I click confirmation button
+  And I wait for 3 seconds
+  And I surf by the post
+  And I wait for 5 seconds
   
