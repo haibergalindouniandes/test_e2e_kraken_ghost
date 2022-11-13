@@ -1,5 +1,7 @@
 {
     "URL":"http://localhost:2368/ghost",
-    "EMAIL":"your@gmail.com",
-    "PASSWORD":"1234512345"
+    "EMAIL":"edgariel2004@gmail.com",
+    "PASSWORD":"1234512345",
+    "TITLE_NEW_POST":"Usando Kraken para crear post",
+    "CONTENT_NEW_POST":"Contenido del post a crear y publicar como escenario"
 }
