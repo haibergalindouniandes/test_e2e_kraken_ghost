@@ -561,8 +561,14 @@ When("I type the tag name", async function () {
     return await element.click();
   });
 
-
-
-
+  When("I change the post {kraken-string}", async function (content) {
+    let element = await this.driver.$('.koenig-editor__editor');
+    return await element.setValue(content);
+  });
   
-  
+  When("I click update", async function () {
+    let element = await this.driver.$(
+      'button[class="gh-btn gh-btn-editor gh-editor-save-trigger green ember-view"]'
+    );
+    return await element.click();
+  });

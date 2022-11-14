@@ -1,6 +1,6 @@
 Feature: Automated GHOST tests
 
-  @user2 @web
+  @user1 @web
   Scenario: Crear Post
     Given I navigate to page "<URL>"
     And I wait
@@ -19,14 +19,25 @@ Feature: Automated GHOST tests
     And I write the post "<CONTENT_NEW_POST>"
     And I wait
     And I click review
+    And I wait for 6 seconds
+  
+  @user2 @web
+  Scenario: Actualizar Post
+    Given I navigate to page "<URL>"
     And I wait
-    And I click publish
+    And I enter email "<EMAIL>"
     And I wait
-    And I click final review
+    And I enter password "<PASSWORD>"
     And I wait
-    And I click publish post
+    And I click login
     And I wait for 3 seconds
-    And I surf by the post
+    And I go to posts
+    And I wait
+    And I click on a published post
+    And I wait
+    And I change the post "<CONTENT_NEW_POST>"
+    And I wait
+    And I click update
     And I wait for 5 seconds
 
   @user3 @web
@@ -345,3 +356,43 @@ Feature: Automated GHOST tests
     And I wait
     And I click confirm delete page
     Then I wait
+
+  @user21 @web
+  Scenario: Publicar Post
+    Given I navigate to page "<URL>"
+    And I wait
+    And I enter email "<EMAIL>"
+    And I wait
+    And I enter password "<PASSWORD>"
+    And I wait
+    And I click login
+    And I wait for 3 seconds
+    And I go to posts
+    And I wait
+    And I click to new post
+    And I wait
+    And I enter title "<TITLE_NEW_POST>"
+    And I wait
+    And I write the post "<CONTENT_NEW_POST>"
+    And I wait
+    And I click review
+    And I wait
+    And I click publish
+    And I wait
+    And I click final review
+    And I wait
+    And I click publish post
+    And I wait for 3 seconds
+    And I surf by the post
+    And I wait for 5 seconds
+
+  @user22 @web
+  Scenario: Iniciar Sesion
+    Given I navigate to page "<URL>"
+    And I wait
+    And I enter email "<EMAIL>"
+    And I wait
+    And I enter password "<PASSWORD>"
+    And I wait
+    And I click login
+    And I wait for 3 seconds
