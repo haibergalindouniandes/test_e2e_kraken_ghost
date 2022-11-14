@@ -149,28 +149,3 @@ Scenario: Eliminar Post
   And I surf by the post
   And I wait for 5 seconds
 
-@user14 @web
-Scenario: Crear pagina
-  Given I navigate to page "<URL>"
-  And I wait
-  And I enter email "<EMAIL>"
-  And I wait
-  And I enter password "<PASSWORD>"
-  And I wait
-  And I click login
-  And I wait for 3 seconds
-  And I go to pages
-  And I wait
-  And I click on new page
-  And I wait
-  And I type a page title
-  And I wait
-  And I click settings button
-  And I wait
-  And I click publish button
-  And I wait
-  And I click final review button
-  And I wait
-  And I click publish now button
-  And I wait for 3 seconds
-   

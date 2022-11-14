@@ -87,7 +87,7 @@ When("I click review", async function () {
 
 When("I click in members", async function () {
   await this.driver.refresh();
-  let element = await this.driver.$('a[href="#/members/"]');
+  let element = await this.driver.$('a[class="active ember-view"]');
   return await element.click();
 });
 
@@ -188,7 +188,7 @@ When(
 
 
 When("I navigate to settings", async function () {
-    let element = await this.driver.$('a[class="active ember-view gh-nav-bottom-tabicon"]');
+    let element = await this.driver.$('a[href="#/settings/"]');
     return element.click();
   });
   
@@ -254,7 +254,7 @@ When("I navigate to settings", async function () {
   
   When("I click in first member exist", async function () {
     await this.driver.refresh();
-    let element = await this.driver.$('a[href="#/members/63716d3dc1fc535148b4de47/"');
+    let element = await this.driver.$('a[class="ember-view gh-list-data"');
     return await element.click();
   });
   
@@ -280,23 +280,23 @@ When("I navigate to settings", async function () {
   
   When("I click in Membersettings", async function () {
     await this.driver.refresh();
-    let element = await this.driver.$("#ember29");
+    let element = await this.driver.$('button[class="gh-btn gh-btn-icon icon-only gh-btn-action-icon open ember-view"]');
     return await element.click();
   });
   
   When("I click in DeleteMember", async function () {
-    let element = await this.driver.$("li:nth-child(2) button:nth-child(1)");
+    let element = await this.driver.$('button[class="mr2"]');
     return await element.click();
   });
   
   When("I confirm Delete Member", async function () {
-    let element = await this.driver.$("#ember55");
+    let element = await this.driver.$('a[class="gh-btn gh-btn-red gh-btn-icon ember-view"]');
     return await element.click();
   });
   
   When("I select first Active user", async function () {
     await this.driver.refresh();
-    let element = await this.driver.$('a[class="ember-view"]');
+    let element = await this.driver.$('a[class="ember-view gh-list-data"]');
     return await element.click();
   });
   
