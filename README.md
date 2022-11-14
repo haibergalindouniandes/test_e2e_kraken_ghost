@@ -1,8 +1,29 @@
+# Integrantes
+
+| Nombre | email |
+| --------- | --------- |
+| Haiber Humberto Galindo Sanchez | h.galindos@uniandes.edu.co |
+| Jhon Fredy Guzmán Caicedo | Jf.guzmanc1@uniandes.edu.co |
+| Jorge Mario Carrillo Riveros | jm.carrillo@uniandes.edu.co |
+| Edgar Ariel Salamanca Camargo | ea.salamanca@uniandes.edu.co |
+
 # Pruebas Automatizadas De Extremo A Extremo Con Kraken - Aplicación Ghost
 Este proyecto permite realizar pruebas automatizadas de extremo a extremo de la aplicación Kraken, haciendo uso del API de Automatización [Kraken](https://thesoftwaredesignlab.github.io/KrakenMobile/). A continuación se explica el detalle: 
 
 ## Escenarios de prueba 
 El proyecto cuenta con una suite de pruebas principal que tiene 20 escenarios de prueba automatizadas, los cuales se detallan a continuación:
+
+### Funcionalidades 
+
+| Funcionalidades a probar | 
+| ----- |
+| Members |
+| Pages |
+| Posts |
+| Staff |
+| Login |
+
+### Escenarios 
 
 | Identificador | Escenario | Descripción |
 | ----- | ----------- | ----------- |
@@ -66,3 +87,4 @@ Cuando finalice la ejecución de la prueba, se generará en la carpeta de `./rep
 - No soporta la definición de varios features a la vez, hay que utilizar uno y dentro de este montar todos los escenarios de pruebas.
 - Realizar la instalación por primera vez de la herramienta resulta ser complejo, aunque existe documentación está no está actualizada.
 - La falta de comunicacion en el equipo podria redundar en que los escenarios fallen por cambios no reportados en la interaz grafica, o escenarios incompletos o replicabilidad.
+- Cuando se lanza la ejecución de las pruebas como todos los escenarios quedan en el mismo archivo feature, se abre una instancia del navegador web por cada escenario, en este caso al tener los 20 escenarios de prueba se abrieron 20 instancias del navegador Chrome saturando los equipos y generando errores por time out en la ejecución de las pruebas. 
