@@ -1,4 +1,4 @@
-# Prueba automatizadas De Extremo A Extremo Con Kraken - Ghost
+# Pruebas Automatizadas De Extremo A Extremo Con Kraken - Aplicación Ghost
 Este proyecto permite realizar pruebas automatizadas de extremo a extremo de la aplicación Kraken, haciendo uso del API de Automatización [Kraken](https://thesoftwaredesignlab.github.io/KrakenMobile/). A continuación se explica el detalle: 
 
 ## Escenarios de prueba 
