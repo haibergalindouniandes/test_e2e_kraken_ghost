@@ -316,8 +316,7 @@ When("I navigate to settings", async function () {
   //);
   
 
-//Jorge
-
+//Delete Post
 When('I click on a published post', async function() {
     let element = await this.driver.$('a[class="ember-view permalink gh-list-data gh-post-list-title"]');
     return await element.click();
@@ -500,5 +499,70 @@ When('I click confirm delete page', async function () {
   element.click();
 });
 
+//Create Page
+When('I click on new page', async function () {
+  let element = await this.driver.$('a[class="ember-view gh-btn gh-btn-primary view-actions-top-row"]');
+  return await element.click();
+});
 
+When("I type the page title", async function () {
+let element = await this.driver.$('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]');
+return await element.setValue("New Page");
+});
+
+When('I click page settings button', async function () {
+  let element = await this.driver.$('button[class="settings-menu-toggle gh-btn gh-btn-editor gh-btn-icon icon-only gh-btn-action-icon"]');
+  return await element.click();
+});
+
+When('I click publish button', async function () {
+  let element = await this.driver.$('button[class="gh-btn gh-btn-editor darkgrey gh-publish-trigger"]');
+  return await element.click();
+});
+
+When('I click final review button', async function () {
+  let element = await this.driver.$('button[class="gh-btn gh-btn-black gh-btn-large"]');
+  return await element.click();
+});
+
+When('I click publish now button', async function () {
+  let element = await this.driver.$('button[class="gh-btn gh-btn-large gh-btn-pulse ember-view"]');
+  return await element.click();
+});
+
+//Modify Page
+When("I type the new page title", async function () {
+  let element = await this.driver.$('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]');
+  return await element.setValue("New Title Page");
+  });
+
+  When('I click update button', async function () {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-editor gh-editor-save-trigger green ember-view"]');
+    return await element.click();
+  });
+
+//Create Tag
+When('I go to tags', async function () {
+  let element = await this.driver.$('a[href="#/tags/"]');
+  return await element.click();
+});
+
+When('I click on new tag', async function () {
+  let element = await this.driver.$('a[href="#/tags/new/"]');
+  return await element.click();
+});
+
+When("I type the tag name", async function () {
+  let element = await this.driver.$('textarea[class="gh-input"]');
+  return await element.setValue("New Tag");
+  });
+  When('I click save button', async function () {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-primary gh-btn-icon ember-view"]');
+    return await element.click();
+  });
+
+
+
+
+  
   
