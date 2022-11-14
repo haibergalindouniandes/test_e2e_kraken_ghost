@@ -345,5 +345,162 @@ When('I surf by the post', async function () {
     return await element.click();
 });
 
+//List pages
+When('I go to pages', async function () {
+  let element = await this.driver.$('a[href="#/pages/');
+  element.click();
+});
+
+Then('I see list of pages', async function () {
+  let elements = await this.driver.$$("li.gh-list-row.gh-posts-list-item.gh-posts-list-item-labs.gh-post-list-plain-status");
+  let listExist = elements.length > 0;
+  expect(listExist).to.equal(true);
+});
+
+// Invite people
+When('I go to settings', async function () {
+  let element = await this.driver.$('a[href="#/settings/');
+  element.click();
+});
+
+When('I go to staff settings', async function () {
+  let element = await this.driver.$('a[href="#/settings/staff/');
+  element.click();
+});
+
+When('I click invite people', async function () {
+  let element = await this.driver.$('button.gh-btn.gh-btn-primary');
+  element.click();
+});
+
+When('I enter random email invitation {kraken-string}', async function (email) {
+  let element = await this.driver.$('input#new-user-email.email.ember-text-field.gh-input.ember-view');
+  return await element.setValue(email);
+});
+
+When('I select the administrator option', async function () {
+  let element = await this.driver.$("//div[normalize-space()='Administrator']");
+  element.click();
+});
+
+When('I click send invitation now', async function () {
+  let element = await this.driver.$('button.gh-btn.gh-btn-black.gh-btn-icon.ember-view');
+  element.click();
+});
+
+Then('I see the invitation {kraken-string}', async function (email) {
+  let element = await this.driver.$$(`//h3[normalize-space()='${email}']`);
+  let invitatioSent = element.length > 0;
+  expect(invitatioSent).to.equal(true);
+});
+
+//Edit twitter card
+When('I click expand twitter card', async function () {
+  let element = await this.driver.$("//div[contains(@class,'gh-viewport')]//div//div[2]//section[1]//div[2]//div[1]//button[1]//span[1]");
+  element.click();
+});
+
+When('I enter random twitter title {kraken-string}', async function (title) {
+  let element = await this.driver.$("//input[@id='twitterTitle']");
+  return await element.setValue(title);
+});
+
+When('I enter random twitter description {kraken-string}', async function (description) {
+  let element = await this.driver.$("//textarea[@id='twitterDescription']");
+  return await element.setValue(description);
+});
+
+When('I click save changes of the twitter card', async function () {
+  let element = await this.driver.$("//span[normalize-space()='Save']");
+  element.click();
+});
+
+Then('I see the twitter card changes made {kraken-string}, {kraken-string}', async function (title, description) {
+  let elementTwitterTitle = await this.driver.$$(`//div[@class="gh-social-twitter-preview-title"][normalize-space()='${title}']`);
+  let existsTitle = elementTwitterTitle.length > 0;
+  expect(existsTitle).to.equal(true);
+  let elementTwitterDesc = await this.driver.$$(`//div[@class="gh-social-twitter-preview-desc"][normalize-space()='${description}']`);
+  let existsDescription = elementTwitterDesc.length > 0;
+  expect(existsDescription).to.equal(true);
+});
+
+// Edit profile information
+When('I click avatar', async function () {
+  let element = await this.driver.$("//div[@class='gh-user-avatar relative']");
+  element.click();
+});
+
+When('I click profile', async function () {
+  let element = await this.driver.$("(//a[normalize-space()='Your profile'])[1]");
+  element.click();
+});
+
+When('I enter random full name {kraken-string}', async function (fullName) {
+  let element = await this.driver.$("//input[@id='user-name']");
+  return await element.setValue(fullName);
+  // return await element.setValue(fullNameProfile);
+});
+
+When('I enter random slug {kraken-string}', async function (slug) {
+  let element = await this.driver.$("//input[@id='user-slug']");
+  return await element.setValue(slug);
+});
+
+When('I enter random location {kraken-string}', async function (location) {
+  let element = await this.driver.$("//input[@id='user-location']");
+  return await element.setValue(location);
+});
+
+When('I enter random website {kraken-string}', async function (website) {
+  let element = await this.driver.$("//input[@id='user-website']");
+  return await element.setValue(website);
+});
+
+When('I enter random bio information {kraken-string}', async function (bio) {
+  let element = await this.driver.$("//textarea[@id='user-bio']");
+  return await element.setValue(bio);
+});
+
+When('I click profile save', async function () {
+  let element = await this.driver.$("//span[normalize-space()='Save']");
+  element.click();
+});
+
+When('I reload the page', async function () {
+  await this.driver.refresh();
+});
+
+Then('I see the profile with name {kraken-string}', async function (fullName) {
+  let elementFullname = await this.driver.$$(`//h2[@class="gh-canvas-title"][normalize-space()='${fullName}']`);
+  let existsFullname = elementFullname.length > 0;
+  expect(existsFullname).to.equal(true);
+});
+
+//Delete page
+When('I click pages', async function () {
+  let element = await this.driver.$('(//a[@href="#/pages/"])[1]');
+  element.click();
+});
+
+When('I select first page', async function () {
+  let element = await this.driver.$("(//a//h3[@class='gh-content-entry-title'])[1]");
+  element.click();
+});
+
+When('I click page settings', async function () {
+  let element = await this.driver.$('//button[contains(@title,"Settings")]//span');
+  element.click();
+});
+
+When('I click delete page', async function () {
+  let element = await this.driver.$('//button[@class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]');
+  element.click();
+});
+
+When('I click confirm delete page', async function () {
+  let element = await this.driver.$('//span[normalize-space()="Delete"]');
+  element.click();
+});
+
 
   
