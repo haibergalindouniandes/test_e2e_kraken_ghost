@@ -87,7 +87,7 @@ When("I click review", async function () {
 
 When("I click in members", async function () {
   await this.driver.refresh();
-  let element = await this.driver.$("#ember20");
+  let element = await this.driver.$('a[href="#/members/"]');
   return await element.click();
 });
 
@@ -188,9 +188,7 @@ When(
 
 
 When("I navigate to settings", async function () {
-    let element = await this.driver.$(
-      'a[class="ember-view gh-nav-bottom-tabicon"]'
-    );
+    let element = await this.driver.$('a[class="active ember-view gh-nav-bottom-tabicon"]');
     return element.click();
   });
   
