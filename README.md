@@ -58,9 +58,11 @@ Cuando finalice la ejecución de la prueba, se generará en la carpeta de `./rep
 - Maneja un lenguaje más amigable y entendible para todos los usuarios.
 - Permite mezclar escenarios de pruebas tanto para aplicaciones móviles como aplicaciones web
 - Genera reportes detallados, agradables visualmente y deja un registro de los diferentes pasos ejecutados a través de screenshots.
+- En el proceso de crear los escenarios, gracias al lenguaje natural que maneja, permite un entendimiento mayor de lo que se quiere probar y es mejor la interaccion entre el equipo(desarrollo, pruebas y negocio)
 
 ## Desventajas de utilizar esta herramienta
 
 - Cuenta con poca documentación y los ejemplos de uso que se encuentran en la página oficial son muy reducidos.
 - No soporta la definición de varios features a la vez, hay que utilizar uno y dentro de este montar todos los escenarios de pruebas.
 - Realizar la instalación por primera vez de la herramienta resulta ser complejo, aunque existe documentación está no está actualizada.
+- La falta de comunicacion en el equipo podria redundar en que los escenarios fallen por cambios no reportados en la interaz grafica, o escenarios incompletos o replicabilidad.
