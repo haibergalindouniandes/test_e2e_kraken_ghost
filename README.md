@@ -1,3 +1,12 @@
+# Integrantes
+
+| Nombre | email |
+| --------- | --------- |
+| Haiber Humberto Galindo Sanchez | h.galindos@uniandes.edu.co |
+| Jhon Fredy Guzmán Caicedo | Jf.guzmanc1@uniandes.edu.co |
+| Jorge Mario Carrillo Riveros | jm.carrillo@uniandes.edu.co |
+| Edgar Ariel Salamanca Camargo | ea.salamanca@uniandes.edu.co |
+
 # Pruebas Automatizadas De Extremo A Extremo Con Kraken - Aplicación Ghost
 Este proyecto permite realizar pruebas automatizadas de extremo a extremo de la aplicación Kraken, haciendo uso del API de Automatización [Kraken](https://thesoftwaredesignlab.github.io/KrakenMobile/). A continuación se explica el detalle: 
 
