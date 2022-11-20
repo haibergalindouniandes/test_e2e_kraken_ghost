@@ -386,7 +386,7 @@ Feature: Automated GHOST tests
     And I surf by the post
     And I wait for 5 seconds
 
-  @user22 @web
+  @user21 @web
   Scenario: Iniciar Sesion
     Given I navigate to page "<URL>"
     And I wait
