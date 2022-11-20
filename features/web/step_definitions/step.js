@@ -553,7 +553,7 @@ When('I click on new tag', async function () {
 });
 
 When("I type the tag name", async function () {
-  let element = await this.driver.$('textarea[class="gh-input"]');
+  let element = await this.driver.$('input[class="gh-input"]');
   return await element.setValue("New Tag");
   });
   When('I click save button', async function () {

@@ -137,104 +137,104 @@ Feature: Automated GHOST tests
     And I change password "<OLDPASSWORD>" and "<NEWPASSWORD>"
     And I wait for 7 seconds
 
-  @user11 @web
-  Scenario: Delete Post
-    Given I navigate to page "<URL>"
-    And I wait
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
-    And I wait
-    And I click login
-    And I wait for 3 seconds
-    And I go to posts
-    And I wait
-    And I click on a published post
-    And I wait
-    And I click settings button
-    And I wait
-    And I click delete button
-    And I wait
-    And I click confirmation button
-    And I wait for 3 seconds
-    And I surf by the post
-    And I wait for 5 seconds
+    @user11 @web
+    Scenario: Delete Post
+      Given I navigate to page "<URL>"
+      And I wait
+      And I enter email "<EMAIL>"
+      And I wait
+      And I enter password "<PASSWORD>"
+      And I wait
+      And I click login
+      And I wait for 3 seconds
+      And I go to posts
+      And I wait
+      And I click on a published post
+      And I wait
+      And I click settings button
+      And I wait
+      And I click delete button
+      And I wait
+      And I click confirmation button
+      And I wait for 3 seconds
+      And I surf by the post
+      And I wait for 5 seconds
 
-  @user12 @web
-  Scenario: List all posts
-    Given I navigate to page "<URL>"
-    And I wait for 5 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
-    And I wait
-    And I click login
-    And I wait for 3 seconds
-    And I go to posts
-    Then I wait
+    @user12 @web
+    Scenario: List all posts
+      Given I navigate to page "<URL>"
+      And I wait for 5 seconds
+      And I enter email "<EMAIL>"
+      And I wait
+      And I enter password "<PASSWORD>"
+      And I wait
+      And I click login
+      And I wait for 3 seconds
+      And I go to posts
+      Then I wait
 
-  @user13 @web
-  Scenario: Create tag
-    Given I navigate to page "<URL>"
-    And I wait
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
-    And I wait
-    And I click login
-    And I wait for 3 seconds
-    And I go to tags
-    And I wait
-    And I click on new tag
-    And I wait
-    And I type the tag name
-    And I wait
-    And I click save button   
-    And I wait for 3 seconds
+   @user13 @web
+   Scenario: Create tag
+     Given I navigate to page "<URL>"
+     And I wait
+     And I enter email "<EMAIL>"
+     And I wait
+     And I enter password "<PASSWORD>"
+     And I wait
+     And I click login
+     And I wait for 3 seconds
+     And I go to tags
+     And I wait
+     And I click on new tag
+     And I wait
+     And I type the tag name
+     And I wait
+     And I click save button   
+     And I wait for 3 seconds
 
-  @user14 @web
-  Scenario: Create page
-    Given I navigate to page "<URL>"
-    And I wait
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
-    And I wait
-    And I click login
-    And I wait for 3 seconds
-    And I go to pages
-    And I wait
-    And I click on new page
-    And I wait
-    And I type the page title
-    And I wait
-    And I click page settings button
-    And I wait
-    And I click publish button
-    And I wait
-    And I click final review button
-    And I wait
-    And I click publish now button
-    And I wait for 3 seconds
+    @user14 @web
+    Scenario: Create page
+      Given I navigate to page "<URL>"
+      And I wait
+      And I enter email "<EMAIL>"
+      And I wait
+      And I enter password "<PASSWORD>"
+      And I wait
+      And I click login
+      And I wait for 3 seconds
+      And I go to pages
+      And I wait
+      And I click on new page
+      And I wait
+      And I type the page title
+      And I wait
+      And I click page settings button
+      And I wait
+      And I click publish button
+      And I wait
+      And I click final review button
+      And I wait
+      And I click publish now button
+      And I wait for 3 seconds
 
-  @user15 @web
-  Scenario: Modify page
-    Given I navigate to page "<URL>"
-    And I wait
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
-    And I wait
-    And I click login
-    And I wait for 3 seconds
-    And I go to pages
-    And I wait
-    And I select first page
-    And I wait
-    And I type the new page title
-    And I wait
-    And I click update button
-    And I wait for 3 seconds
+   @user15 @web
+   Scenario: Modify page
+     Given I navigate to page "<URL>"
+     And I wait
+     And I enter email "<EMAIL>"
+     And I wait
+     And I enter password "<PASSWORD>"
+     And I wait
+     And I click login
+     And I wait for 3 seconds
+     And I go to pages
+     And I wait
+     And I select first page
+     And I wait
+     And I type the new page title
+     And I wait
+     And I click update button
+     And I wait for 3 seconds
 
   @user16 @web
   Scenario: List all pages

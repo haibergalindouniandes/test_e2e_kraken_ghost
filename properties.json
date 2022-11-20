@@ -6,6 +6,6 @@
     "CONTENT_NEW_POST":"Contenido del post a crear y publicar como escenario",
     "OLDPASSWORD":"Jorge.2020",
     "NEWPASSWORD":"Jorge.2022",
-    "URL_GENERAL_SETTINGS": "http://localhost:2368/ghost/#/settings/general"    
+    "URL_GENERAL_SETTINGS": "http://localhost:2369/ghost/#/settings/general"    
 
 }
