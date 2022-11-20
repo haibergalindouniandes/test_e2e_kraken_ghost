@@ -4,9 +4,7 @@ Feature: Automated GHOST tests
   Scenario: Crear Post
     Given I navigate to page "<URL>"
     And I wait
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 3 seconds
@@ -25,9 +23,7 @@ Feature: Automated GHOST tests
   Scenario: Actualizar Post
     Given I navigate to page "<URL>"
     And I wait
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 3 seconds
@@ -41,12 +37,10 @@ Feature: Automated GHOST tests
     And I wait for 5 seconds
 
   @user3 @web
-  Scenario: My scenario 3
+  Scenario: Crear Nueva Cuenta
     Given I navigate to page "<URL>"
     And I wait for 5 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 3 seconds
@@ -64,12 +58,10 @@ Feature: Automated GHOST tests
     And I wait for 20 seconds
 
   @user4 @web
-  Scenario: My scenario 4
+  Scenario: Crear Nuevo Miembro
     Given I navigate to page "<URL>"
     And I wait for 5 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 3 seconds
@@ -81,12 +73,10 @@ Feature: Automated GHOST tests
     And I wait for 3 seconds
 
   @user5 @web
-  Scenario: My scenario 5
+  Scenario: Editar Miembro
     Given I navigate to page "<URL>"
     And I wait for 5 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 3 seconds
@@ -98,12 +88,10 @@ Feature: Automated GHOST tests
     And I wait for 3 seconds
 
   @user6 @web
-  Scenario: My scenario 6
+  Scenario: Eliminar Miembro
     Given I navigate to page "<URL>"
     And I wait for 5 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 3 seconds
@@ -119,12 +107,10 @@ Feature: Automated GHOST tests
     And I wait for 3 seconds
 
   @user7 @web
-  Scenario: My scenario 7
+  Scenario: Cambiar Password
     Given I navigate to page "<URL>"
     And I wait for 5 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 3 seconds
@@ -141,9 +127,7 @@ Feature: Automated GHOST tests
     Scenario: Delete Post
       Given I navigate to page "<URL>"
       And I wait
-      And I enter email "<EMAIL>"
-      And I wait
-      And I enter password "<PASSWORD>"
+      And I enter email "<EMAIL>" and password "<PASSWORD>"
       And I wait
       And I click login
       And I wait for 3 seconds
@@ -164,9 +148,7 @@ Feature: Automated GHOST tests
     Scenario: List all posts
       Given I navigate to page "<URL>"
       And I wait for 5 seconds
-      And I enter email "<EMAIL>"
-      And I wait
-      And I enter password "<PASSWORD>"
+      And I enter email "<EMAIL>" and password "<PASSWORD>"
       And I wait
       And I click login
       And I wait for 3 seconds
@@ -177,9 +159,7 @@ Feature: Automated GHOST tests
    Scenario: Create tag
      Given I navigate to page "<URL>"
      And I wait
-     And I enter email "<EMAIL>"
-     And I wait
-     And I enter password "<PASSWORD>"
+     And I enter email "<EMAIL>" and password "<PASSWORD>"
      And I wait
      And I click login
      And I wait for 3 seconds
@@ -196,9 +176,7 @@ Feature: Automated GHOST tests
     Scenario: Create page
       Given I navigate to page "<URL>"
       And I wait
-      And I enter email "<EMAIL>"
-      And I wait
-      And I enter password "<PASSWORD>"
+      And I enter email "<EMAIL>" and password "<PASSWORD>"
       And I wait
       And I click login
       And I wait for 3 seconds
@@ -221,9 +199,7 @@ Feature: Automated GHOST tests
    Scenario: Modify page
      Given I navigate to page "<URL>"
      And I wait
-     And I enter email "<EMAIL>"
-     And I wait
-     And I enter password "<PASSWORD>"
+     And I enter email "<EMAIL>" and password "<PASSWORD>"
      And I wait
      And I click login
      And I wait for 3 seconds
@@ -240,9 +216,7 @@ Feature: Automated GHOST tests
   Scenario: List all pages
     Given I navigate to page "<URL>"
     And I wait for 5 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 3 seconds
@@ -255,9 +229,7 @@ Feature: Automated GHOST tests
   Scenario: Send invitation to people
     Given I navigate to page "<URL>"
     And I wait for 2 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 2 seconds
@@ -282,9 +254,7 @@ Feature: Automated GHOST tests
   Scenario: Edit twitter card
     Given I navigate to page "<URL>"
     And I wait for 2 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 2 seconds
@@ -309,9 +279,7 @@ Feature: Automated GHOST tests
   Scenario: Edit my profile information
     Given I navigate to page "<URL>"
     And I wait for 5 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 2 seconds
@@ -340,9 +308,7 @@ Feature: Automated GHOST tests
   Scenario: Delete page
     Given I navigate to page "<URL>"
     And I wait for 5 seconds
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 2 seconds
@@ -361,9 +327,7 @@ Feature: Automated GHOST tests
   Scenario: Publicar Post
     Given I navigate to page "<URL>"
     And I wait
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 3 seconds
@@ -390,9 +354,7 @@ Feature: Automated GHOST tests
   Scenario: Iniciar Sesion
     Given I navigate to page "<URL>"
     And I wait
-    And I enter email "<EMAIL>"
-    And I wait
-    And I enter password "<PASSWORD>"
+    And I enter email "<EMAIL>" and password "<PASSWORD>"
     And I wait
     And I click login
     And I wait for 3 seconds
