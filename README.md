@@ -8,7 +8,7 @@
 | Edgar Ariel Salamanca Camargo | ea.salamanca@uniandes.edu.co |
 
 # Pruebas Automatizadas De Extremo A Extremo Con Kraken - Aplicación Ghost
-Este proyecto permite realizar pruebas automatizadas de extremo a extremo de la aplicación Kraken, haciendo uso del API de Automatización [Kraken](https://thesoftwaredesignlab.github.io/KrakenMobile/). A continuación se explica el detalle: 
+Este proyecto permite realizar pruebas automatizadas de extremo a extremo de la aplicación Ghost, haciendo uso del API de Automatización [Kraken](https://thesoftwaredesignlab.github.io/KrakenMobile/). A continuación se explica el detalle: 
 
 ## Escenarios de prueba 
 El proyecto cuenta con una suite de pruebas principal que tiene 20 escenarios de prueba automatizadas, los cuales se detallan a continuación:
@@ -53,6 +53,11 @@ A continuación, se presenta la estructura interna de la aplicación a nivel de 
 
 ![image](https://drive.google.com/uc?export=view&id=1BsKF8h35XRTPFHto0Q4WDD--5vvut5X0)
 
+### Prerequisitos para instalar Kraken
+- Android SDK
+- Appium
+- NodeJS (version >=12)
+- java 
 
 ## Instalación y configuración
 Para utilizar hacer uso del test de pruebas de la aplicación Ghost, se deben seguir los siguientes pasos:
@@ -60,7 +65,12 @@ Para utilizar hacer uso del test de pruebas de la aplicación Ghost, se deben se
 - Kraken requiere Ruby 2.20 o superior, pero se recomienda usar la versión 2.3. 
 - Se hace uso calabash-android como para su ejecucion.
 , puede verificar sus requisitos previos en este enlace. La instalación y administración de una gema se realiza a través del comando gem. Para instalar la gema de Kraken, ejecute el siguiente comando.
-- Instalar los módulos requeridos: Desde una terminal se ejecuta el comando `gem install kraken-mobile` en la carpeta raíz del proyecto; esto instalara los módulos de Kraken y otras dependencias necesarias para el correcto funcionamiento del proyecto, como lo es el módulo de [faker](https://www.npmjs.com/package/faker), [Cucumber](https://cucumber.io/), [Chai](https://www.chaijs.com/), [Gherkin]( https://npm.io/search/keyword:gherkin), entre otras.
+- Instalar los módulos requeridos: Desde una terminal se ejecuta el comando 
+`npm install kraken-node -g` en la carpeta raíz del proyecto; 
+esto instalara los módulos de Kraken y otras dependencias necesarias para el correcto funcionamiento del proyecto, incluye aplicaciones como [Cucumber](https://cucumber.io/), [Chai](https://www.chaijs.com/), [Gherkin]( https://npm.io/search/keyword:gherkin)
+
+Adicional podria instalar [faker](https://www.npmjs.com/package/faker) usando el siguiente comando,
+`npm install -D faker` , entre otras.
 - Configure las propiedades de la aplicación: La carpeta raíz del repositorio contiene el archivo `properties.json`, el cual brinda los siguientes parámetros que se pueden modificar: 
 <br>* `URL:` Url de la aplicación a pruebas. Ej: `http://localhost:2368/ghost/`.
 <br>* `EMAIL`: Correo electrónico de la cuenta administrador de la aplicación. Ej: `jose_2345@pruebas.com.co`.
